@@ -1,0 +1,26 @@
+.hero-1 {
+  background-image: url("../assets/images/banners/tie.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  width: 100%;
+}
+
+.hero-2 {
+  background-image: url("../assets/images/banners/track2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  width: 100%;
+}
+
+.hero-3 {
+  background-image: url("../assets/images/banners/exhausted.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  width: 100%;
+}

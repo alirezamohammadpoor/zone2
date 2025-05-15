@@ -1,9 +1,3 @@
-img {
-  width: 100%;
-  height: 50%;
-  object-fit: cover;
-}
-
 .asics-product-grid-container,
 .nike-product-grid-container,
 .adidas-product-grid-container {
@@ -12,8 +6,16 @@ img {
   gap: 10px;
 }
 
-.product-grid-item {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
+.product-grid-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.product-grid {
+  margin-left: 10px;
+  margin-right: 10px;
 }

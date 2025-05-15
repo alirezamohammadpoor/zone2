@@ -4,12 +4,8 @@ nav {
   justify-content: space-around;
   padding: 1rem;
   gap: 1rem;
-}
-
-nav img {
-  height: 2rem; /* 32px on default browser settings */
-  width: auto;
-  max-width: 120px;
+  background-color: transparent;
+  height: 1vh;
 }
 
 a {

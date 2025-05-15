@@ -1,0 +1,10 @@
+.hero-button {
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 6px;
+  padding: 10px 20px;
+  color: white;
+  width: 150px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}

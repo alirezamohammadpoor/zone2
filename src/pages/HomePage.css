@@ -3,8 +3,11 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50vh;
+  height: 70vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .hero-2 {
@@ -12,8 +15,11 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50vh;
+  height: 70vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .hero-3 {
@@ -21,6 +27,19 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50vh;
+  height: 70vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-1-text,
+.hero-1-text-2,
+.hero-2-text,
+.hero-2-text-2,
+.hero-3-text,
+.hero-3-text-2 {
+  color: white;
+  margin-left: 10px;
 }

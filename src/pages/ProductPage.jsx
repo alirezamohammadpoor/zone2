@@ -1,17 +1,27 @@
 import "./ProductPage.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { fetchProducts } from "../services/kicksService";
+import { useParams } from "react-router-dom";
+import AddToCartButton from "../components/buttons/AddToCartButton";
+import { CartContext } from "../context/CartContext";
 
-function ProductPage() {
-  const [products, setProducts] = useState([]);
+function ProductPage({ id: propId }) {
+  const { id: routeId } = useParams();
+  const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedSize, setSelectedSize] = useState(null);
+  const { addToCart } = useContext(CartContext);
+
+  const formatDescription = (text) => {
+    return text.replace(/<br>/g, "");
+  };
 
   useEffect(() => {
-    const getProducts = async () => {
+    const getProduct = async () => {
       try {
-        const data = await fetchProducts();
-        setProducts(data);
+        const data = await fetchProducts(propId || routeId);
+        setProduct(data);
         setLoading(false);
       } catch (err) {
         setError(err.message);
@@ -19,43 +29,72 @@ function ProductPage() {
       }
     };
 
-    getProducts();
-  }, []);
+    getProduct();
+  }, [propId, routeId]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
+  if (!product || !product.data || !product.data[0])
+    return <div>Product not found</div>;
 
-  console.log(products);
+  const productData = product.data[0];
+  const sizes = [
+    5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12,
+  ];
+
+  const handleAddToCart = () => {
+    if (!selectedSize) {
+      alert("Please select a size");
+      return;
+    }
+
+    const cartItem = {
+      id: `${productData.sku}-${selectedSize}`,
+      name: productData.title,
+      price: productData.min_price,
+      size: selectedSize,
+      image: productData.image,
+      sku: productData.sku,
+    };
+
+    addToCart(cartItem);
+    alert("Added to cart!");
+  };
 
   return (
-    <div>
-      <div className="image-container">
-        <img src={products.data[0].image} alt={products.data[0].title} />
-      </div>
-      <h3>{products.data[0].title}</h3>
-      <p>{products.data[0].max_price} €</p>
-      <div className="size-selector">
-        <h3>Select Size</h3>
-        <div className="size-grid">
-          <button className="size-button">5</button>
-          <button className="size-button">5.5</button>
-          <button className="size-button">6</button>
-          <button className="size-button">6.5</button>
-          <button className="size-button">7</button>
-          <button className="size-button">7.5</button>
-          <button className="size-button">8</button>
-          <button className="size-button">8.5</button>
-          <button className="size-button">9</button>
-          <button className="size-button">9.5</button>
-          <button className="size-button">10</button>
-          <button className="size-button">10.5</button>
-          <button className="size-button">11</button>
-          <button className="size-button">11.5</button>
-          <button className="size-button">12</button>
+    <div className="product-page">
+      <div className="product-container">
+        <div className="image-container">
+          <img src={productData.image} alt={productData.title} />
         </div>
-        <button>Add to Cart</button>
-        <h3>Product Description</h3>
-        <p>{products.data[0].description}</p>
+        <div className="product-details">
+          <p className="product-title">{productData.title}</p>
+          <p className="price">{productData.min_price} €</p>
+
+          <div className="size-selector">
+            <p className="size-selector-title">Select Size</p>
+            <div className="size-grid">
+              {sizes.map((size) => (
+                <button
+                  key={size}
+                  className={`size-button ${
+                    selectedSize === size ? "selected" : ""
+                  }`}
+                  onClick={() => setSelectedSize(size)}
+                >
+                  {size}
+                </button>
+              ))}
+            </div>
+          </div>
+          <AddToCartButton handleAddToCart={handleAddToCart} />
+          <div className="product-description">
+            <h3>Product Description</h3>
+            <p className="description-text">
+              {formatDescription(productData.description)}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

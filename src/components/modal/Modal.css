@@ -1,0 +1,87 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end; /* Align content to bottom */
+}
+
+.modal-content {
+  background-color: white;
+  width: 100%;
+  height: 85vh;
+  padding: 20px;
+  position: relative;
+  animation: slideUp 0.3s ease-out;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+.modal.closing .modal-content {
+  animation: slideDown 0.3s ease-out;
+}
+
+.close-button {
+  position: sticky;
+  top: 0;
+  right: 20px;
+  float: right;
+  background: white;
+  border: 1px solid black;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.close-button:hover {
+  background: black;
+  color: white;
+}
+
+/* Ensure product page styles work within modal */
+.modal .product-page {
+  margin: 0;
+  clear: both; /* Clear the float from close button */
+}
+
+.modal .product-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal .image-container {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.modal .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}

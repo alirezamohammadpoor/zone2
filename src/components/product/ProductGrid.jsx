@@ -32,7 +32,6 @@ function ProductGrid() {
         );
         setProducts(data);
         setLoading(false);
-        console.log("Data from API:", data);
       } catch (err) {
         setError(err.message);
         setLoading(false);
@@ -44,8 +43,6 @@ function ProductGrid() {
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
-
-  console.log("Products state:", products);
 
   return (
     <div className="product-grid">
@@ -91,6 +88,7 @@ function ProductGrid() {
                 image={product.data[0].image}
                 title={product.data[0].title}
                 price={product.data[0].min_price}
+                sku={product.data[0].sku}
               />
             ))}
         </div>
@@ -109,6 +107,7 @@ function ProductGrid() {
                 image={product.data[0].image}
                 title={product.data[0].title}
                 price={product.data[0].min_price}
+                sku={product.data[0].sku}
               />
             ))}
         </div>
@@ -127,6 +126,7 @@ function ProductGrid() {
                 image={product.data[0].image}
                 title={product.data[0].title}
                 price={product.data[0].min_price}
+                sku={product.data[0].sku}
               />
             ))}
         </div>

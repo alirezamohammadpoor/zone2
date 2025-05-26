@@ -1,11 +1,11 @@
 import "./Modal.css";
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ProductPage from "../../pages/ProductPage";
-import { CartContext } from "../../context/CartContext";
 
 function Modal({ isOpen, onClose, productId }) {
   const [isClosing, setIsClosing] = useState(false);
-  const [isCartOpen, setIsCartOpen] = useState(false);
+  const navigate = useNavigate();
 
   if (!isOpen) return null;
 
@@ -17,10 +17,6 @@ function Modal({ isOpen, onClose, productId }) {
     }, 300);
   };
 
-  const handleOpenCart = () => {
-    setIsCartOpen(true);
-  };
-
   return (
     <div className={`modal ${isClosing ? "closing" : ""}`}>
       <div className="modal-content">
@@ -30,7 +26,10 @@ function Modal({ isOpen, onClose, productId }) {
         <ProductPage
           id={productId}
           onClose={handleClose}
-          onOpenCart={handleOpenCart}
+          onOpenCart={() => {
+            handleClose();
+            navigate("/cart");
+          }}
         />
       </div>
     </div>

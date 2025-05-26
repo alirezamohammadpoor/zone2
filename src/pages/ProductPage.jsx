@@ -1,16 +1,18 @@
 import "./ProductPage.css";
 import { useState, useEffect, useContext } from "react";
 import { fetchProducts } from "../services/kicksService";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import AddToCartButton from "../components/buttons/AddToCartButton";
 import { CartContext } from "../context/CartContext";
 
 function ProductPage({ id: propId }) {
   const { id: routeId } = useParams();
+  const navigate = useNavigate();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
+  const [quantity, setQuantity] = useState(1);
   const { addToCart } = useContext(CartContext);
 
   const formatDescription = (text) => {
@@ -55,10 +57,17 @@ function ProductPage({ id: propId }) {
       size: selectedSize,
       image: productData.image,
       sku: productData.sku,
+      quantity: quantity,
     };
 
     addToCart(cartItem);
-    alert("Added to cart!");
+    navigate("/cart");
+  };
+
+  const handleQuantityChange = (newQuantity) => {
+    if (newQuantity >= 1) {
+      setQuantity(newQuantity);
+    }
   };
 
   return (
@@ -87,6 +96,26 @@ function ProductPage({ id: propId }) {
               ))}
             </div>
           </div>
+
+          <div className="quantity-selector">
+            <p className="quantity-title">Quantity</p>
+            <div className="quantity-controls">
+              <button
+                onClick={() => handleQuantityChange(quantity - 1)}
+                className="quantity-button"
+              >
+                -
+              </button>
+              <span className="quantity-value">{quantity}</span>
+              <button
+                onClick={() => handleQuantityChange(quantity + 1)}
+                className="quantity-button"
+              >
+                +
+              </button>
+            </div>
+          </div>
+
           <AddToCartButton handleAddToCart={handleAddToCart} />
           <div className="product-description">
             <h3>Product Description</h3>

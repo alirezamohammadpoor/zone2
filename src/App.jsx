@@ -4,8 +4,8 @@ import Layout from "./components/layout/Layout";
 import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
 import ProductGrid from "./components/product/ProductGrid";
-import CartPage from "./pages/CartPage";
 import OrderPage from "./pages/OrderPage";
+import CartPage from "./pages/CartPage";
 
 const App = () => {
   return (

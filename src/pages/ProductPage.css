@@ -1,6 +1,7 @@
 .product-page {
   margin-left: 10px;
   margin-right: 10px;
+  margin-top: 10vh;
 }
 
 .image-container {
@@ -92,4 +93,12 @@
   font-size: 1.1rem;
   min-width: 30px;
   text-align: center;
+}
+
+@media (min-width: 1386px) {
+  .product-page {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  .product-container {
 }

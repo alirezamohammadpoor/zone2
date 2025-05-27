@@ -1,5 +1,4 @@
-.hero-1 {
-  background-image: url("../assets/images/banners/tie.png");
+.hero {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -8,40 +7,35 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.hero-1 {
+  background-image: url("../assets/images/banners/tie.png");
 }
 
 .hero-2 {
   background-image: url("../assets/images/banners/track2.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 70vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 
 .hero-3 {
   background-image: url("../assets/images/banners/exhausted.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 70vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 
-.hero-1-text,
-.hero-1-text-2,
-.hero-2-text,
-.hero-2-text-2,
-.hero-3-text,
-.hero-3-text-2 {
+.hero-text {
   color: white;
   margin-left: 10px;
+}
+
+.hero-text-primary {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.hero-text-secondary {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  width: 90%;
 }
 
 @media (min-width: 1386px) {

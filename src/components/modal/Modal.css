@@ -85,3 +85,11 @@
     transform: translateY(100%);
   }
 }
+
+@media (min-width: 1386px) {
+  .modal .product-page {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}

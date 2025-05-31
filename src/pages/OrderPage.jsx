@@ -1,5 +1,5 @@
-import { useState, useContext } from "react";
 import "./OrderPage.css";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 

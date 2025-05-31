@@ -101,4 +101,7 @@
     margin-right: 25%;
   }
   .product-container {
+    display: flex;
+    gap: 2rem;
+  }
 }

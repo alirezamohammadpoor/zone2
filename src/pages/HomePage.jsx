@@ -19,7 +19,7 @@ function HomePage() {
           </p>
           <HeroButton
             text="All products"
-            onClick={() => navigate("/product/HF7357-900")}
+            onClick={() => navigate("/products")}
           />
         </div>
         <div className="hero hero-2">
@@ -31,10 +31,7 @@ function HomePage() {
           </p>
           <HeroButton
             text="Shop now"
-            onClick={() => {
-              console.log("Navigating to product...");
-              navigate("/product/HF7357-900");
-            }}
+            onClick={() => navigate("/product/HF7357-900")}
           />
         </div>
       </div>

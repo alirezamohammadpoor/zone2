@@ -8,7 +8,9 @@ function NavBar() {
 
   return (
     <nav>
-      <Link to="/">Zone 2</Link>
+      <Link to="/">
+        <span className="logo-text">Zone 2</span>
+      </Link>
       <Link to="/products">Products</Link>
       <Link to="/cart">Cart ({cart.length})</Link>
     </nav>

@@ -1,8 +1,10 @@
+/* Global CSS variables and base styles */
 :root {
   background-color: white;
   font-family: "Roboto", sans-serif;
 }
 
+/* Reset default body styles and prevent horizontal scroll */
 body {
   margin: 0;
   padding: 0;

@@ -1,3 +1,4 @@
+/* Main cart page container */
 .cart-page {
   padding: 10px;
   display: flex;
@@ -5,6 +6,7 @@
   min-height: 80vh;
 }
 
+/* Cart item image container */
 .cart-item-image-container {
   width: 200px;
   height: 200px;
@@ -12,21 +14,25 @@
   border-radius: 4px;
 }
 
+/* Cart item image styling */
 .cart-item-image-container img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
+/* Cart item details section */
 .cart-item-details {
   display: flex;
   flex-direction: column;
 }
 
+/* Cart item details text spacing */
 .cart-item-details p {
   margin: 3px 0;
 }
 
+/* Individual cart item container */
 .cart-container {
   display: flex;
   flex-direction: row;
@@ -34,6 +40,7 @@
   align-items: center;
 }
 
+/* Price summary container - fixed at bottom */
 .price-container {
   margin-top: auto; /* keeps it at bottom */
   margin-left: -10px;
@@ -45,12 +52,14 @@
   align-items: center;
 }
 
+/* Price labels column */
 .price-container-row {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+/* Price values column */
 .price-container-row-2 {
   display: flex;
   flex-direction: column;
@@ -58,10 +67,12 @@
   align-items: flex-end;
 }
 
+/* Spacer between price columns */
 .filler {
   flex: 1;
 }
 
+/* Checkout button container */
 .cart-button-container {
   background-color: rgb(244, 243, 243);
   padding: 10px;
@@ -69,6 +80,7 @@
   margin-left: -10px;
 }
 
+/* Checkout button styling */
 .cart-button {
   border: 1px solid black;
   background-color: transparent;
@@ -82,11 +94,13 @@
   color: white;
 }
 
+/* Checkout button hover state */
 .cart-button:hover {
   background-color: black;
   color: white;
 }
 
+/* Quantity control button styling */
 .quantity-button {
   width: 30px;
   height: 30px;
@@ -99,10 +113,12 @@
   justify-content: center;
 }
 
+/* Quantity value display */
 .quantity-value {
   text-align: center;
 }
 
+/* Remove item button styling */
 .remove-button {
   cursor: pointer;
   margin-top: 1rem;

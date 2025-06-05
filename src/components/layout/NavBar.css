@@ -1,3 +1,4 @@
+/* Navigation bar container - flex layout with spacing */
 nav {
   display: flex;
   align-items: center;
@@ -8,17 +9,20 @@ nav {
   height: 1vh;
 }
 
+/* Navigation links styling */
 a {
   text-decoration: none;
   color: black;
 }
 
+/* Responsive font size for larger screens */
 @media (min-width: 1386px) {
   nav {
     font-size: 1.2rem;
   }
 }
 
+/* Logo text styling */
 .logo-text {
   font-size: 1.2rem;
   font-weight: 500;

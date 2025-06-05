@@ -59,8 +59,8 @@ function ProductGrid() {
     getProducts();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  if (loading) return <div>Loading all products...</div>;
+  if (error) return <div>Error: Products not found {error}</div>;
 
   return (
     <div className="product-grid">

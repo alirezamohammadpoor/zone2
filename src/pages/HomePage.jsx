@@ -2,6 +2,7 @@ import "./HomePage.css";
 import HeroButton from "../components/buttons/HeroButton";
 import { useNavigate } from "react-router-dom";
 
+// Homepage component with hero sections and navigation
 function HomePage() {
   const navigate = useNavigate();
 
@@ -11,7 +12,9 @@ function HomePage() {
 
   return (
     <div>
+      {/* Main hero section with two featured sections */}
       <div className="hero-container">
+        {/* First hero section - Main message */}
         <div className="hero hero-1">
           <p className="hero-text hero-text-primary">Miles without limits</p>
           <p className="hero-text hero-text-secondary">
@@ -22,6 +25,7 @@ function HomePage() {
             onClick={() => navigate("/products")}
           />
         </div>
+        {/* Second hero section - Featured product */}
         <div className="hero hero-2">
           <p className="hero-text hero-text-primary">
             Chase Your Fastest Split
@@ -35,6 +39,7 @@ function HomePage() {
           />
         </div>
       </div>
+      {/* Third hero section - Nutrition focus */}
       <div className="hero hero-3">
         <p className="hero-text hero-text-primary">Fuel for the Finish Line</p>
         <p className="hero-text hero-text-secondary">

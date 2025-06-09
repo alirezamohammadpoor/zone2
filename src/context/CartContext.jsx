@@ -46,8 +46,14 @@ const CartProvider = ({ children }) => {
     updateCart([]);
   };
 
+  const shippingCost = 10;
+
   const getTotalPrice = () => {
-    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    const subtotal = cart.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
+    return subtotal + shippingCost;
   };
 
   return (

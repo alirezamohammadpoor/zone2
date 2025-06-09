@@ -26,7 +26,11 @@
 /* Hero text styling */
 .hero-text {
   color: white;
+<<<<<<< HEAD
   margin-left: 10px;
+=======
+  margin-left: 0.5rem;
+>>>>>>> e6d607b (Added README file and minor css tweaks)
 }
 
 /* Primary heading text */
@@ -39,7 +43,11 @@
 /* Secondary description text */
 .hero-text-secondary {
   font-size: 1.2rem;
+<<<<<<< HEAD
   margin-bottom: 30px;
+=======
+  margin-bottom: 1.5rem;
+>>>>>>> e6d607b (Added README file and minor css tweaks)
   width: 90%;
 }
 

@@ -1,26 +1,46 @@
 .order-page {
+<<<<<<< HEAD
   padding: 20px;
+=======
+  padding: 0.5rem;
+>>>>>>> e6d607b (Added README file and minor css tweaks)
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .order-summary {
   background-color: #f5f5f5;
+<<<<<<< HEAD
   padding: 20px;
   margin-bottom: 30px;
   border-radius: 8px;
+=======
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+>>>>>>> e6d607b (Added README file and minor css tweaks)
 }
 
 .order-item {
   display: flex;
+<<<<<<< HEAD
   gap: 20px;
   padding: 15px 0;
+=======
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+>>>>>>> e6d607b (Added README file and minor css tweaks)
   border-bottom: 1px solid #ddd;
 }
 
 .order-item-image {
+<<<<<<< HEAD
   width: 100px;
   height: 100px;
+=======
+  width: 10rem;
+  height: 10rem;
+>>>>>>> e6d607b (Added README file and minor css tweaks)
   object-fit: contain;
 }
 
@@ -29,6 +49,7 @@
 }
 
 .order-item-details h3 {
+<<<<<<< HEAD
   margin: 0 0 5px 0;
 }
 
@@ -38,34 +59,66 @@
 
 .order-total {
   margin-top: 20px;
+=======
+  margin: 0 0 0.5rem 0;
+}
+
+.order-item-details p {
+  margin: 0.3rem 0;
+}
+
+.order-total {
+  margin-top: 1.5rem;
+>>>>>>> e6d607b (Added README file and minor css tweaks)
   text-align: right;
   font-weight: bold;
 }
 
 .order-form {
+<<<<<<< HEAD
   max-width: 600px;
   margin: 0 auto;
 }
 
 .form-group {
   margin-bottom: 20px;
+=======
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+>>>>>>> e6d607b (Added README file and minor css tweaks)
 }
 
 .form-group label {
   display: block;
+<<<<<<< HEAD
   margin-bottom: 5px;
+=======
+  margin-bottom: 0.5rem;
+>>>>>>> e6d607b (Added README file and minor css tweaks)
   font-weight: 500;
 }
 
 .form-group input {
   width: 100%;
+<<<<<<< HEAD
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
+=======
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+>>>>>>> e6d607b (Added README file and minor css tweaks)
 }
 
 .form-buttons {
   display: flex;
+<<<<<<< HEAD
   gap: 10px;
   margin-top: 30px;
 }
@@ -74,6 +127,16 @@
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
+=======
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.form-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+>>>>>>> e6d607b (Added README file and minor css tweaks)
   cursor: pointer;
 }
 
@@ -90,16 +153,25 @@
 .error-message {
   color: #ff0000;
   font-size: 0.8rem;
+<<<<<<< HEAD
   margin-top: 4px;
+=======
+  margin-top: 0.5rem;
+>>>>>>> e6d607b (Added README file and minor css tweaks)
 }
 
 .order-success {
   text-align: center;
+<<<<<<< HEAD
   padding: 40px 20px;
+=======
+  padding: 1.5rem 1rem;
+>>>>>>> e6d607b (Added README file and minor css tweaks)
 }
 
 .order-success h1 {
   color: #28a745;
+<<<<<<< HEAD
   margin-bottom: 20px;
 }
 
@@ -115,6 +187,23 @@
   color: white;
   border: none;
   border-radius: 4px;
+=======
+  margin-bottom: 1.5rem;
+}
+
+.order-success p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.home-button {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+>>>>>>> e6d607b (Added README file and minor css tweaks)
   cursor: pointer;
 }
 
@@ -123,4 +212,11 @@
     margin-left: 25%;
     margin-right: 25%;
   }
+<<<<<<< HEAD
+=======
+
+  .order-form {
+    max-width: 25rem;
+  }
+>>>>>>> e6d607b (Added README file and minor css tweaks)
 }

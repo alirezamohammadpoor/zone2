@@ -1,12 +1,21 @@
 .hero-button {
   border: 1px solid white;
   background-color: transparent;
+<<<<<<< HEAD
   border-radius: 6px;
   padding: 10px 20px;
   color: white;
   width: 150px;
   margin-bottom: 20px;
   margin-left: 10px;
+=======
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  color: white;
+  width: 150px;
+  margin-bottom: 1.5rem;
+  margin-left: 0.5rem;
+>>>>>>> e6d607b (Added README file and minor css tweaks)
   cursor: pointer;
   font-size: 1rem;
 }

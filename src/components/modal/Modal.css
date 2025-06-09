@@ -13,12 +13,8 @@
 .modal-content {
   background-color: white;
   width: 100%;
-  height: 85vh;
-<<<<<<< HEAD
-  padding: 20px;
-=======
+  height: 90vh;
   padding: 1rem;
->>>>>>> e6d607b (Added README file and minor css tweaks)
   position: relative;
   animation: slideUp 0.3s ease-out;
   overflow-y: auto;
@@ -31,27 +27,16 @@
 .close-button {
   position: sticky;
   top: 0;
-<<<<<<< HEAD
-  right: 20px;
-=======
   right: 1rem;
->>>>>>> e6d607b (Added README file and minor css tweaks)
   float: right;
   background: white;
   border: 1px solid black;
   font-size: 1rem;
   cursor: pointer;
-<<<<<<< HEAD
-  padding: 8px 16px;
-  border-radius: 4px;
-  z-index: 1;
-  margin-bottom: 20px;
-=======
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   z-index: 1;
-  margin-bottom: 1.5rem;
->>>>>>> e6d607b (Added README file and minor css tweaks)
+  margin-bottom: 1rem;
 }
 
 .close-button:hover {
@@ -68,20 +53,12 @@
 .modal .product-container {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
-  gap: 20px;
-=======
-  gap: 1.5rem;
->>>>>>> e6d607b (Added README file and minor css tweaks)
+  gap: 1rem;
 }
 
 .modal .image-container {
   width: 100%;
-<<<<<<< HEAD
   max-height: 300px;
-=======
-  max-height: 20rem;
->>>>>>> e6d607b (Added README file and minor css tweaks)
   overflow: hidden;
 }
 

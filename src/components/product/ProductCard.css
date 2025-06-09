@@ -2,7 +2,6 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-<<<<<<< HEAD
   border-radius: 8px;
   padding: 10px;
   transition: box-shadow 0.3s ease;
@@ -11,12 +10,6 @@
 
 .product-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-=======
-  padding: 0.5rem;
-}
-
-.product-card:hover {
->>>>>>> e6d607b (Added README file and minor css tweaks)
   cursor: pointer;
 }
 
@@ -24,10 +17,7 @@
   width: 100%;
   height: 50%;
   object-fit: cover;
-<<<<<<< HEAD
   border-radius: 4px;
-=======
->>>>>>> e6d607b (Added README file and minor css tweaks)
 }
 
 @media (min-width: 1386px) {

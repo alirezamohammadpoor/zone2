@@ -1,8 +1,11 @@
 import "./FilterButton.css";
 
-const FilterButton = ({ text, onClick }) => {
+const FilterButton = ({ text, onClick, isSelected }) => {
   return (
-    <button className="filter-button" onClick={onClick}>
+    <button
+      className={`filter-button ${isSelected ? "selected" : ""}`}
+      onClick={onClick}
+    >
       {text}
     </button>
   );

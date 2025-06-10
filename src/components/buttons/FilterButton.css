@@ -6,10 +6,16 @@
   color: black;
   width: 100px;
   margin: 5px;
+  transition: all 0.2s ease;
 }
 
 .filter-button:hover {
   background-color: black;
   color: white;
   cursor: pointer;
+}
+
+.filter-button.selected {
+  background-color: black;
+  color: white;
 }

@@ -73,16 +73,30 @@ function ProductGrid() {
         Made to last, continuously refined.
       </p>
       <div className="product-grid-filter">
-        <FilterButton text="All" onClick={() => setSelectedBrand("all")} />
-        <FilterButton text="Asics" onClick={() => setSelectedBrand("asics")} />
-        <FilterButton text="Nike" onClick={() => setSelectedBrand("nike")} />
+        <FilterButton
+          text="All"
+          onClick={() => setSelectedBrand("all")}
+          isSelected={selectedBrand === "all"}
+        />
+        <FilterButton
+          text="Asics"
+          onClick={() => setSelectedBrand("asics")}
+          isSelected={selectedBrand === "asics"}
+        />
+        <FilterButton
+          text="Nike"
+          onClick={() => setSelectedBrand("nike")}
+          isSelected={selectedBrand === "nike"}
+        />
         <FilterButton
           text="Adidas"
           onClick={() => setSelectedBrand("adidas")}
+          isSelected={selectedBrand === "adidas"}
         />
         <FilterButton
-          text={isRaceFilter ? "All Shoes" : "Race Shoes"}
+          text="Race Shoes"
           onClick={() => setIsRaceFilter(!isRaceFilter)}
+          isSelected={isRaceFilter}
         />
         <FilterButton
           text="Clear Filters"
@@ -90,6 +104,7 @@ function ProductGrid() {
             setSelectedBrand("all");
             setIsRaceFilter(false);
           }}
+          isSelected={false}
         />
       </div>
 
